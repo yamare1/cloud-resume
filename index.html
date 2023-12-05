@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> <!-- Set character encoding to UTF-8 for proper text rendering -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Define compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configure viewport for responsive design -->
+
+    <title>Yonathan Amare</title> <!-- Set the title of the web page (Replace 'FNAME LNAME' with your actual name) -->
+
+    <!-- Include Bootstrap CSS (https://getbootstrap.com) from a CDN (Content Delivery Network) for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Include FontAwesome CSS (https://fontawesome.com) from a CDN for icons (Make sure to update version if needed) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+    <script src="js/visitor-counter.js"></script>
+    <script>
+      visitorCounter();
+    </script>
+
+  </head>
+  <body>
+
+    <img src="/images/cloud_resume.jpg"> <!-- Display an image, replace 'cloud_resume.jpg OBJECT URL' with the actual image source from S3 -->
+    <p>
+    Visitor #: <span id="visitor-counter"></span>
+
+    <title>Yonathan Amare</title>
+    <style>
+        /* Reset styles */
+        body, h1, h2, h3, h4, h5, h6, p, ul, li {
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(12, 24, 48);
+            color: white;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgb(12, 24, 48);
+            border-radius: 10px;
+            overflow: hidden;
+            color: black;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2ECC71);
+            color: black;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .profile-pic {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .name {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 24px;
+            color: #ddd;
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+            color: black;
+        }
+
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2.section-title {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://media.licdn.com/dms/image/D5603AQGJkZiKlQKbOg/profile-displayphoto-shrink_800_800/0/1698717969295?e=1706745600&v=beta&t=kR-yEHjwIwXnDLDH1zNACfSLZAMvlQRK8uy0k0S8ItI" alt="Your Profile Picture" class="profile-pic">
+            <div class="name">Yonathan Amare</div>
+            <div class="job-title">LMU ISBA Student</div>
+        </header>
+
+        <div class="contact-info">
+            <p>yamare1@lion.lmu.edu</p>
+            <p>925-448-4325</p>
+            <p><a href="https://www.linkedin.com/in/yonathanamare/" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Summary</h2>
+            <div class="section-content">
+                <p>Determined student-athlete studying Information Systems and Business Analytics at Loyola Marymount University. Possesses strong analytical and problem-solving skills, attention to detail, and a collaborative working style. Looking for an opportunity to leverage his skills in data analytics to solve business problems.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-content">
+                <p>Bachelor of Science in Information Systems & Business Analytics</p>
+                <p>Loyola Marymount University, 2024</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-content">
+                <h3>Capitol Drugs</h3>
+                <p><i>Data Analyst</i></p>
+                <p>09/2023 - Present</p>
+                <ul>
+                    <li>Collect, organize, and analyze diverse datasets from Cardinal Health and various sources to identify trends impacting inventory management and cost-efficiency</li>
+                    <li>Develop reports, dashboards, and visualizations using Excel and SQL to present insights to stakeholders</li>
+                    <li>Collaborate with team to propose data-driven strategies to optimize supply chain operations and enhance cost-effectiveness for Capitol Drugs</li>
+                    <li>Monitor Cardinal Health's performance and provide insights for cost-saving opportunities</li>
+                </ul>
+                
+                <h3>LMU Information Technology Services</h3>
+                <p><i>Classroom Support Technician</i></p>
+                <p>08/2022 - Present</p>
+                <ul>
+                    <li>Provide faculty with assistance in use of audio/visual technology in classroom</li>
+                    <li>Handle incoming calls and provide over-the-phone troubleshooting</li>
+                    <li>Document and follow up with issues through issue tracking software (ServiceNow)</li>
+                    <li>Support enterprise audio/visual systems (Crestron, PCs/Macs, projectors, networking systems)</li>
+                </ul>
+
+                <h3>NCAA Division I Cross Country & Track</h3>
+                <p><i>Student-Athlete</i></p>
+                <p>08/2020 - Present</p>
+                <ul>
+                    <li>Committed to an intensive training plan of 15+ hours a week	</li>
+                    <li>Developing teamwork, communication, and leadership through collaborative group efforts on and off the course/track with a team of 20+</li>
+                    <li>Applying time management skills while balancing practice schedule and schoolwork</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="section-content">
+                <span class="highlight">Python (Numpy, Pandas, Matplotlib),</span>
+                <span class="highlight">SQL,</span>
+                <span class="highlight">Data Manipulation,</span>
+                <span class="highlight">Microsoft Office (Excel, Access Word, PowerPoint, Outlook),</span>
+                <span class="highlight">Jira,</span>
+                <span class="highlight">Confluence,</span>
+                <span class="highlight">Adaptability,</span>
+                <span class="highlight">Time Management</span>
+                <!-- Add more skills -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-content">
+                <div class="project">
+                    <h3><a href="https://drive.google.com/drive/folders/1nJu8rQFRkU6kfBlWk2Cd4z55Q9YK-vmT?usp=share_link" target="_blank">Student Information Database Design</a></h3>
+                    <p>This is an Access application I designed from the ground up using an entity-relationship model as my guide. The goal for this application was to use various forms and subforms to make it easier to enter student information. This information includes their grades, major, enrollment status, and course schedules.</p>
+                    <h3><a href="https://drive.google.com/drive/folders/1nJu8rQFRkU6kfBlWk2Cd4z55Q9YK-vmT?usp=share_link" target="_blank">Veterinary Hospital Database Subqueries</a></h3>
+                    <p>Formulated subqueries using a veterinary hospital database. Filtered data based on specific prompts. Employed aggregate functions, inner and outer joins, where, order by, group by clause, and table aliases for readability.</p>
+                </div>
+                <!-- Add more projects in a similar format if needed -->
+            </div>
+        </div>
+      </body>
+
+    <!-- Include Bootstrap JavaScript from a CDN (for Bootstrap functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
