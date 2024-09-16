@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> <!-- Set character encoding to UTF-8 for proper text rendering -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Define compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configure viewport for responsive design -->
+
+    <title>Yonathan Amare</title> <!-- Set the title of the web page (Replace 'FNAME LNAME' with your actual name) -->
+
+    <!-- Include Bootstrap CSS (https://getbootstrap.com) from a CDN (Content Delivery Network) for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Include FontAwesome CSS (https://fontawesome.com) from a CDN for icons (Make sure to update version if needed) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+    <script src="js/visitor-counter.js"></script>
+    <script>
+      visitorCounter();
+    </script>
+
+  </head>
+  <body>
+
+    <!-- <img src="/images/cloud_resume.jpg"> Display an image, replace 'cloud_resume.jpg OBJECT URL' with the actual image source from S3 -->
+
+
+    <title>Yonathan Amare</title>
+    <style>
+        /* Reset styles */
+        body, h1, h2, h3, h4, h5, h6, p, ul, li {
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(12, 24, 48);
+            color: white;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgb(12, 24, 48);
+            border-radius: 10px;
+            overflow: hidden;
+            color: black;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2ECC71);
+            color: black;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .profile-pic {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .name {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 24px;
+            color: #ddd;
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+            color: black;
+        }
+
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2.section-title {
+            font-size: 30px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-content {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+            color: #666;
+            font-style: italic;
+        }
+
+        .resume-container {
+            background-color: #ffffff; /* Background color of the container */
+            border: 2px solid #e0e0e0; /* Border properties */
+            border-radius: 10px; /* Rounded corners for the border */
+            margin: 20px; /* Add margin for spacing */
+            padding: 20px; /* Padding inside the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+        
+        /* Center align the Summary section */
+        .section:nth-child(3) {
+            text-align: center;
+        }
+
+        /* Tab the experience descriptions */
+        .section-content ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <img src="https://media.licdn.com/dms/image/D5603AQGJkZiKlQKbOg/profile-displayphoto-shrink_800_800/0/1698717969295?e=1706745600&v=beta&t=kR-yEHjwIwXnDLDH1zNACfSLZAMvlQRK8uy0k0S8ItI" alt="Your Profile Picture" class="profile-pic">
+            <div class="name">Yonathan Amare</div>
+            <div class="job-title">LMU ISBA Student</div>
+        </header>
+
+        <div class="contact-info">
+            <p>yamare1@lion.lmu.edu</p>
+            <p><a href="https://www.linkedin.com/in/yonathanamare/" target="_blank">LinkedIn</a></p>
+            <p>
+                <div style="position: absolute; padding: 10px; border-radius: 5px; color:#000000; font-weight: bold;"></div>
+                <a href="https://medium.com/@yamare/navigating-the-cloud-resume-challenge-51f4e5442364" target="_blank">How I Made this Website on the AWS Cloud</a>
+            </p>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Summary</h2>
+            <div class="section-content">
+                <p>Senior NCAA Division I student athlete studying Information Systems & Business Analytics at Loyola Marymount University. Focused on leveraging analytical
+                    and problem-solving skills in data science. Driven by an interest in music streaming personalization through machine learning and AI, I aim to explore these
+                    areas in a corporate environment.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-content">
+                <p>Bachelor of Science in Information Systems & Business Analytics</p>
+                <p>Loyola Marymount University, 2024</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-content">
+                <h3>Capstone Project Data Analyst</h3>
+                <p><i>All-Win Rx</i></p>
+                <p>09/2023 - Present</p>
+                <ul>
+                    <li>Create web application to provide what-if cost analysis for targeted customers (healthcare companies)</li>
+                    <li>Analyze customer data to identify trends, patterns, anomalies that impact inventory management and cost efficiency</li>
+                    <li>Build logic for web application that determines procurement cost of drugs by distinguishing quantity of generic vs brand name drugs</li>
+                    <li>Enable GPO to monitor potential customers' activity rather than relying on email and phone communications</li>
+                </ul>
+                
+                <h3>Classroom Support Technician</h3>
+                <p><i>LMU Information Technology Services</i></p>
+                <p>08/2022 - Present</p>
+                <ul>
+                    <li>Provide faculty with assistance in use of audio/visual technology in classroom</li>
+                    <li>Handle incoming calls and provide over-the-phone troubleshooting</li>
+                    <li>Document and follow up with issues through issue tracking software (ServiceNow)</li>
+                    <li>Support enterprise audio/visual systems (Crestron, PCs/Macs, projectors, networking systems)</li>
+                </ul>
+
+                <h3>Student-Athlete</h3>
+                <p><i>NCAA Division I Cross Country & Track</i></p>
+                <p>08/2020 - Present</p>
+                <ul>
+                    <li>Committed to an intensive training plan of 15+ hours a week	</li>
+                    <li>Developing teamwork, communication, and leadership through collaborative group efforts with a team of 20+</li>
+                    <li>Applying time management skills while balancing practice schedule and schoolwork</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="section-content">
+                <span class="highlight">Python (Numpy, Pandas, Matplotlib, Scikit-Learn),</span>
+                <span class="highlight">Data Analysis,</span>
+                <span class="highlight">Data Manipulation,</span>
+                <span class="highlight">SQL,</span>
+                <span class="highlight">Microsoft Office (Excel, Access Word, PowerPoint, Outlook),</span>
+                <span class="highlight">AWS (S3, CloudFront, Route 53, DynamoDB, Lambda, API Gateway),</span>
+                <span class="higlight">DNS,</span>
+                <span class="highlight">Jira,</span>
+                <span class="highlight">Confluence,</span>
+                <span class="highlight">Adaptability,</span>
+                <span class="highlight">Time Management</span>
+                <!-- Add more skills -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-content">
+                <div class="project">
+                    <h3><a href="https://github.com/yamare1/datathon2024" target="_blank">Maximizing EPA Awards for Minority and Women-Owned Businesses</a></h3>
+                    <p>Winning LMU Datathon project: used advanced analytics to spotlight the opportunities and barriers within EPA contracts for minority and women-owned
+                        businesses. Analyzed contract awards using descriptive analytics and highlighted feature importances with Random Forest and Decision Tree models. Our
+                        findings revealed the landscape of EPA awards and suggested targeting high-volume sectors to help these businesses thrive.</p>
+
+                    <h3><a href="https://github.com/yamare1/amazon-electronics" target="_blank">Amazon Top 100 Electronics</a></h3>
+                    <p>Guided client Smart Home Systems Inc. to figure out which product they should sell on Amazon in order to enter the top 100 selling electronics. Imported,
+                        cleaned, and analyzed data to gain insights on product features and choose optimal product.</p>
+
+                    <h3><a href="https://yonathanamare.com/" target="_blank">Cloud Resume Challenge</a></h3>
+                    <p>Hosted my resume on a static website using Amazon Web Services. The challenge involves implementation of security and optimization measures by leveraging different AWS services such as S3, Cloudfront, DynamoDB, and Lambda. Also included a live website visitor counter. Wrote frontend code using HTML, CSS, and Javascript. Backend code involves a Python lambda function that interacts with a NoSQL database.</p>
+                </div>
+                <!-- Add more projects in a similar format if needed -->
+            </div>
+        </div>
+      </body>
+    </div>
+    <p>
+        Visitor #: <span id="visitor-counter"></span>
+    <!-- Include Bootstrap JavaScript from a CDN (for Bootstrap functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
