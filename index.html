@@ -35,9 +35,10 @@
       justify-content: center;
       align-items: center;
       height: 90vh;
-      background-image: url('/Users/yonathanamare/Desktop/Cloud Resume Challenge/cloud-resume/IMG_4460.jpg') !important;
+      background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/IMG_4460.jpg?raw=true') !important;
       background-size: cover;
       background-position: center;
+      color: white;
       text-align: center;
       flex-direction: column;
     }
@@ -86,13 +87,6 @@
       padding: 20px;
       margin-top: 40px;
     }
-    .experience, .certifications, .summary {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 20px;
-    }
     .experience h3, .certifications h3, .summary h3 {
       font-size: 24px;
       text-align: center;
@@ -120,6 +114,7 @@
 <body>
 
   <nav>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
@@ -133,8 +128,8 @@
     <p>Information Systems & Business Analytics Graduate</p>
   </section>
 
-  <section id="summary" class="section">
-    <h2>Summary</h2>
+  <section id="about" class="section">
+    <h2>About Me</h2>
     <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
       <p>Recent graduate from Loyola Marymount University with a Bachelor of Science in Information Systems & Business Analytics. Strong analytical and problem-solving skills, attention to detail, and collaborative working style. Looking for opportunities to explore Data Science, Machine Learning, and AI in a corporate setting.</p>
     </div>
@@ -144,19 +139,29 @@
     <h2>Experience</h2>
     <div class="card-container">
       <div class="card">
-        <h3>Capstone Project Software Engineer</h3>
+        <h3>Software Engineer</h3>
         <p>All-Win Rx | Sep 2023 - May 2024</p>
-        <p>Developed automation tools for data extraction and database integration using Python and MySQL.</p>
+        <p>Developed a robust Selenium webdriver to automate data extraction for over 1000 missing entries from pharmacy websites,
+          enhancing database accuracy and efficiency. Utilized Python for scripting and integration with MySQL databases.</p>
+        <p>Spearheaded the storage and organization of large datasets in a cloud-hosted SQL database, enabling dynamic data analysis and
+          strategic decision-making for pharmacy cost management.</p>
+        <p>Contributed to a cross-functional project that equipped small pharmacies with tools to analyze discounts and profits for the All Win
+          Rx GPO. Delivered a comprehensive solution involving web scraping, data analysis, and database management, significantly
+          enhancing their bargaining power under tight deadlines..</p>
       </div>
       <div class="card">
         <h3>Classroom Support Technician</h3>
         <p>LMU ITS | Aug 2022 - May 2024</p>
-        <p>Provided AV tech support and troubleshooting for faculty members, supporting various technologies.</p>
+        <p>Provided faculty with assistance in use of audio/visual technology in the classroom.</p>
+        <p>Handled incoming calls and provide over-the-phone troubleshooting.</p>
+        <p>Documented and follow up with issues through issue tracking software (ServiceNow).</p>
       </div>
       <div class="card">
         <h3>Division I Cross Country Athlete</h3>
         <p>NCAA | Aug 2020 - May 2024</p>
-        <p>Balanced academic and athletic responsibilities, honing leadership and teamwork skills.</p>
+        <p>Committed to an intensive training plan of 15+ hours a week</p>
+        <p>Developed teamwork, communication, and leadership through collaborative group efforts on and off the course/track with a team of 20+</p>
+        <p>Applied time management skills while balancing practice schedule and schoolwork</p>
       </div>
     </div>
   </section>
@@ -165,13 +170,20 @@
     <h2>Certifications</h2>
     <div class="card-container">
       <div class="card">
-        <h3>AWS Certified Cloud Practitioner</h3>
+        <h3>DeepLearning.AI</h3>
+        <p>Supervised Machine Learning: Regression and Classification</p>
       </div>
       <div class="card">
-        <h3>Google Analytics Certified</h3>
+        <h3>DataCamp</h3>
+        <p>Joining Data with Pandas, Data Manipulation with Pandas, Introduction to Data Science in Python, Exploratory Data Analysis in Python, Machine Learning with Tree-Based Models in Python, Linear Classifiers in Python, Introduction to Linear Modeling in Python, Cluster Analysis in Python</p>
       </div>
       <div class="card">
-        <h3>Certified ScrumMaster (CSM)</h3>
+        <h3>Microsoft</h3>
+        <p>Microsoft Office Specialist: Excel Associate (Office 2019)</p>
+      </div>
+      <div class="card">
+        <h3>Bloomberg</h3>
+        <p>Bloomberg Market Concepts</p>
       </div>
     </div>
   </section>  
@@ -179,17 +191,23 @@
   <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="card-container">
-      <a href="https://github.com/Stevenlo11/AllWinRX" target="_blank" class="card" style="text-decoration: none; color: inherit;">
-        <h3>Capstone Project</h3>
-        <p>Developed automation tools for data extraction and database integration using Python and MySQL.</p>
+      <a href="https://github.com/yamare1/veterinary-hospital" target="_blank" class="card" style="text-decoration: none; color: inherit;">
+        <h3>Veterinary Hospital Subqueries</h3>
+        <p>Developed complex SQL queries to analyze a veterinary hospital database, utilizing subqueries, inner/outer joins, and aggregate
+          functions to filter and organize data. Optimized query performance by employing GROUP BY, ORDER BY, and table aliases for
+          clarity and efficiency. Extracted insights that supported operational decision-making for the hospital's services..</p>
       </a>
-      <a href="https://github.com/yamare1/cloud-resume-challenge" target="_blank" class="card" style="text-decoration: none; color: inherit;">
+      <a href="https://github.com/yamare1/cloud-resume" target="_blank" class="card" style="text-decoration: none; color: inherit;">
         <h3>Cloud Resume Challenge</h3>
-        <p>Hosted resume on AWS using S3, Cloudfront, and Lambda with a live visitor counter.</p>
+        <p>Hosted a static resume website on AWS, using S3, CloudFront, DynamoDB, and Lambda for security, optimization, and
+          performance. Implemented a live visitor counter with Python Lambda interacting with a NoSQL database. Developed the frontend
+          with HTML, CSS, and JavaScript, showcasing both backend and frontend integration.</p>
       </a>
       <a href="https://github.com/yamare1/datathon2024" target="_blank" class="card" style="text-decoration: none; color: inherit;">
         <h3>LMU Datathon</h3>
-        <p>Used machine learning models to analyze EPA awards for minority and women-owned businesses.</p>
+        <p>Utilized Python libraries (NumPy, Pandas, Matplotlib, Scikit-learn) to conduct EDA, create visualizations, and build machine
+          learning models. Analyzed feature importance using Random Forest and Decision Tree algorithms, identifying key variables
+          impacting EPA contract awards, and provided actionable insights to improve access for minority and women-owned businesses.</p>
       </a>
     </div>
   </section>
@@ -200,19 +218,23 @@
     <div class="card-container">
       <div class="card">
         <h3>Programming</h3>
-        <p>Python, JavaScript, MySQL</p>
+        <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, MySQL, </p>
       </div>
       <div class="card">
         <h3>Data Science</h3>
-        <p>Data Analysis, Machine Learning, Data Visualization</p>
+        <p>Data Analysis, Machine Learning, Data Visualization, Data Modeling</p>
+      </div>
+      <div class="card">
+        <h3>Environments</h3>
+        <p>Jupter Notebook, Visual Studio Code, Google Colab, Github, Confluence, Jira, Microsoft Office (Word, Excel, PowerPoint, Access, Outlook)</p>
       </div>
       <div class="card">
         <h3>Cloud Services</h3>
-        <p>AWS (S3, Lambda, DynamoDB), Azure</p>
+        <p>AWS (S3, Cloudfront, Lambda, DynamoDB)</p>
       </div>
       <div class="card">
         <h3>Other Skills</h3>
-        <p>Teamwork, Communication, Adaptability, Time Management</p>
+        <p>Version Control, Git, Troubleshooting, Critical Thinking, Teamwork, Communication, Adaptability, Time Management</p>
       </div>
     </div>
   </section>
