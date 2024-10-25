@@ -414,12 +414,23 @@
     body[data-theme='dark'] .slider .moon {
       color: #f1c40f;
     }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+      .card {
+        max-width: 100%; /* Full-width cards on mobile */
+      }
+    }
+
   </style>
 
   <script src="js/visitor-counter.js"></script>
   <script>
     visitorCounter();
   </script>
+  
 
 </head>
 <body>
