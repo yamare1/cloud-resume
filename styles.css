@@ -1,36 +1,35 @@
 /* =========================
-   Reset and Base Styles
+   CSS Reset
    ========================= */
    * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
+  /* =========================
+     Base Styles
+     ========================= */
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f7f9fc;
+    color: #333333;
     margin: 0;
     padding: 0;
     transition: background-color 0.5s, color 0.5s;
   }
   
   /* =========================
-     CSS Variables
+     Dark Mode Styles
      ========================= */
-  :root {
-    --primary-color: #5555ff;
-    --secondary-color: #ff6347;
-    --background-color: #f7f9fc;
-    --text-color: #333333;
-    --card-background: #ffffff;
-  }
-  
-  /* Dark Mode Overrides */
   body.dark {
     background-color: #121212;
     color: #e0e0e0;
+  }
+  
+  body.dark nav {
+    background-color: rgba(18, 18, 18, 0.9);
+    box-shadow: none;
   }
   
   body.dark nav a {
@@ -38,52 +37,87 @@
   }
   
   body.dark nav a:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
   }
   
   body.dark .card {
     background-color: #1e1e1e;
     color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark .footer {
+    background-color: rgba(18, 18, 18, 0.9);
+    color: #e0e0e0;
+    box-shadow: none;
+  }
+  
+  body.dark .footer a {
+    color: #bb86fc;
+  }
+  
+  body.dark .footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  body.dark .hero::before {
+    background-color: rgba(0, 0, 0, 0.5);
   }
   
   /* =========================
-     Navigation Bar
+     Navigation Bar Styles
      ========================= */
   nav {
-    background-color: var(--background-color);
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.5s, color 0.5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s;
   }
   
-  .nav-links a {
-    margin-right: 20px;
-    color: var(--text-color);
+  nav .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: #333333;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.5s, border-bottom 0.5s;
+    position: relative;
   }
   
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+  nav a:hover {
+    color: #5555ff;
+    border-bottom: 2px solid #5555ff;
+  }
+  
+  nav a.active {
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
   }
   
   /* =========================
-     Hero Section
+     Hero Section with JavaScript-Based Parallax
      ========================= */
   .hero {
     position: relative;
-    height: 100vh;
+    height: 90vh;
+    overflow: hidden;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .hero-background {
@@ -91,22 +125,38 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url('/images/IMG_4460.jpg');
+    height: 130%; /* Increased height for better parallax effect */
+    background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/IMG_4460.jpg?raw=true');
     background-size: cover;
     background-position: center;
-    transform: translateY(-15%);
-    transition: transform 0.2s ease-out;
-    z-index: -1;
+    transform: translateY(-15%); /* Initial position */
+    transition: transform 0.1s ease-out;
+    will-change: transform;
   }
   
   .hero-content {
+    position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .hero img:hover {
+    transform: scale(1.1);
   }
   
   .hero h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .hero p {
@@ -114,12 +164,17 @@
   }
   
   /* =========================
-     Section Styles
+     Sections
      ========================= */
   .section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 80px 20px;
+    scroll-margin-top: 80px;
+  }
+  
+  .section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
   }
   
   /* =========================
@@ -130,37 +185,28 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     justify-items: center;
-    align-items: stretch; /* Ensures all cards stretch to the same height */
   }
   
   .card {
-    background-color: var(--card-background);
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
     max-width: 400px;
-    text-align: left;
+    text-align: left; /* Changed to left alignment */
     transition: transform 0.3s ease, background-color 0.5s, color 0.5s, box-shadow 0.5s;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 300px; /* Ensures all cards have a minimum height */
-    box-sizing: border-box; /* Includes padding in height calculation */
   }
   
   .card h3 {
     font-size: 24px;
-    margin-bottom: 10px; /* Consistent spacing below headings */
-    color: var(--primary-color);
-  }
-  
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Consistent spacing between paragraphs */
+    margin-bottom: 10px;
+    color: #5555ff;
   }
   
   .card p {
@@ -169,12 +215,17 @@
     margin-bottom: 10px;
   }
   
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
   /* =========================
      Footer Section with Parallax
      ========================= */
   .footer {
     position: relative;
-    background-image: url('/images/footer-bg.jpg');
+    background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/footer-bg.jpg?raw=true');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -210,7 +261,7 @@
   }
   
   .footer a:hover {
-    color: var(--primary-color);
+    color: #5555ff;
     text-decoration: underline;
   }
   
@@ -353,4 +404,4 @@
       flex-direction: column;
       gap: 10px;
     }
-  }    
+  }  
