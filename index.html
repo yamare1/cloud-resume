@@ -2,449 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yonathan Amare - Portfolio</title>
+
+  <!-- Favicon and Related Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* =========================
-       Base Styles (Light Mode)
-       ========================= */
 
-    /* Ensure smooth transitions between themes */
-    body, nav, .card, .footer, a, button {
-      transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
-    }
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    /* Body */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f7f9fc;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-/* Navigation Bar Styles */
-
-    /* Light Mode Navigation Bar */
-    nav {
-      background-color: #ffffff; /* Light background */
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 1000; /* Ensures it stays above other elements */
-      display: flex;
-      justify-content: space-around;
-      align-items: center; /* Vertically center items */
-      transition: background-color 0.5s;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-    }
-
-    nav a {
-      color: #333333; /* Dark text in light mode */
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.5s;
-    }
-
-    nav a:hover {
-      color: #5555ff; /* Hover color */
-      text-decoration: underline;
-    }
-
-    /* Dark Mode Navigation Bar */
-    body[data-theme='dark'] nav {
-      background-color: #121212; /* Match webpage dark background */
-      box-shadow: none; /* Remove shadow for consistency */
-    }
-
-    body[data-theme='dark'] nav a {
-      color: #ffffff; /* White text in dark mode */
-    }
-
-    body[data-theme='dark'] nav a:hover {
-      color: #ffffff; /* White on hover in dark mode */
-      text-decoration: underline;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 90vh;
-      background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/IMG_4460.jpg?raw=true') !important;
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .hero img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 24px;
-    }
-
-    /* Sections */
-    .section {
-      padding: 50px 20px;
-    }
-
-    .section h2 {
-      font-size: 36px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    /* Cards */
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      max-width: 300px;
-      text-align: center;
-      transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
-    }
-
-    .card h3 {
-      font-size: 24px;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    #projects .card {
-      transition: transform 0.3s ease;
-    }
-
-    #projects .card:hover {
-      transform: scale(1.05);
-    }
-
-    #summary .card {
-      max-width: 800px;  /* Increase this value for more width */
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Footer Styles */
-
-/* Light Mode Footer */
-    .footer {
-      background-color: #ffffff; /* Light background */
-      color: #333; /* Dark text */
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      transition: background-color 0.5s, color 0.5s;
-      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-    }
-
-    .footer a {
-      color: #333; /* Dark text */
-      text-decoration: none;
-      transition: color 0.5s;
-    }
-
-    .footer a:hover {
-      color: #5555ff; /* Hover color */
-      text-decoration: underline;
-    }
-
-    /* Dark Mode Footer */
-    body[data-theme='dark'] .footer {
-      background-color: #121212; /* Match webpage dark background */
-      color: #e0e0e0; /* Light text */
-      box-shadow: none; /* Remove shadow for consistency */
-    }
-
-    body[data-theme='dark'] .footer a {
-      color: #bb86fc; /* Light link color in dark mode */
-    }
-
-    body[data-theme='dark'] .footer a:hover {
-      color: #ffffff; /* White on hover in dark mode */
-      text-decoration: underline;
-    }
-
-
-/* Toggle Switch Styles */
-
-    /* Common Styles */
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc; /* Light mode slider background */
-      transition: background-color 0.4s;
-      border-radius: 34px;
-    }
-
-    .slider::before {
-      content: "";
-      position: absolute;
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white; /* Light mode slider handle */
-      transition: transform 0.4s;
-      border-radius: 50%;
-    }
-
-    /* Sun and Moon Icons */
-    .slider .sun,
-    .slider .moon {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 16px;
-      color: #f39c12; /* Sun color */
-      transition: opacity 0.4s;
-    }
-
-    .slider .moon {
-      right: 10px;
-      color: #f1c40f; /* Moon color */
-      opacity: 0;
-    }
-
-    /* Dark Mode Toggle Switch */
-    body[data-theme='dark'] .slider {
-      background-color: #121212; /* Match webpage dark background */
-    }
-
-    body[data-theme='dark'] .slider::before {
-      background-color: #e0e0e0; /* Light slider handle */
-    }
-
-    body[data-theme='dark'] .slider .sun {
-      color: #f39c12;
-    }
-
-    body[data-theme='dark'] .slider .moon {
-      color: #f1c40f;
-    }
-
-    /* Toggle Switch Checked State */
-    input:checked + .slider {
-      background-color: #121212; /* Dark mode slider background */
-    }
-
-    input:checked + .slider::before {
-      transform: translateX(26px);
-    }
-
-    input:checked + .slider .sun {
-      opacity: 0;
-    }
-
-    input:checked + .slider .moon {
-      opacity: 1;
-    }
-
-    /* Responsive Toggle Switch */
-    @media (max-width: 600px) {
-      .switch {
-        width: 50px;
-        height: 28px;
-      }
-
-      .slider::before {
-        height: 22px;
-        width: 22px;
-        left: 3px;
-        bottom: 3px;
-      }
-
-      .slider .sun,
-      .slider .moon {
-        font-size: 14px;
-      }
-    }
-
-    /* =========================
-       Dark Mode Styles
-       ========================= */
-
-    /* Apply dark mode when data-theme="dark" is set on the body */
-    body[data-theme='dark'] {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-
-    body[data-theme='dark'] nav {
-      background-color: #1f1f1f;
-    }
-
-    body[data-theme='dark'] nav a {
-      color: #e0e0e0;
-    }
-
-    body[data-theme='dark'] .hero {
-      color: #e0e0e0;
-    }
-
-    body[data-theme='dark'] .card {
-      background-color: #1e1e1e;
-      color: #e0e0e0;
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    }
-
-    body[data-theme='dark'] .footer {
-      background-color: #1f1f1f;
-      color: #e0e0e0;
-    }
-
-    body[data-theme='dark'] .footer a {
-      color: #bb86fc;
-    }
-
-    body[data-theme='dark'] a {
-      color: #bb86fc;
-    }
-
-    body[data-theme='dark'] button {
-      background-color: #333;
-      color: #e0e0e0;
-      border: none;
-      transition: background-color 0.5s, color 0.5s;
-    }
-
-    body[data-theme='dark'] button:hover {
-      background-color: #444;
-    }
-
-    /* Optional: Adjust link colors in dark mode */
-    body[data-theme='dark'] a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    /* Optional: Adjust the hero background overlay if needed */
-    /* If you have overlays or additional elements in the hero section */
-    body[data-theme='dark'] .hero::before {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    /* Additional Dark Mode Styles for Other Elements */
-
-    /* Adjusting inputs, forms, and other interactive elements */
-    body[data-theme='dark'] input,
-    body[data-theme='dark'] textarea,
-    body[data-theme='dark'] select {
-      background-color: #333;
-      color: #e0e0e0;
-      border: 1px solid #555;
-    }
-
-    body[data-theme='dark'] input::placeholder,
-    body[data-theme='dark'] textarea::placeholder {
-      color: #aaa;
-    }
-
-    body[data-theme='dark'] .side-menu {
-      background-color: #1f1f1f;
-    }
-
-    body[data-theme='dark'] .side-menu button {
-      background-color: #333;
-      color: #e0e0e0;
-    }
-
-    body[data-theme='dark'] .side-menu button:hover {
-      background-color: #444;
-    }
-
-    /* Ensure the toggle switch matches dark mode */
-    body[data-theme='dark'] .slider {
-      background-color: #121212; /* Match webpage dark background */
-    }
-
-    body[data-theme='dark'] .slider::before {
-      background-color: #e0e0e0; /* Light slider handle */
-    }
-
-    body[data-theme='dark'] .slider .sun {
-      color: #f39c12;
-    }
-
-    body[data-theme='dark'] .slider .moon {
-      color: #f1c40f;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-      .card {
-        max-width: 100%; /* Full-width cards on mobile */
-      }
-    }
-
-  </style>
-
-  <script src="js/visitor-counter.js"></script>
-  <script>
-    visitorCounter();
-  </script>
-  
-
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-    <a href="https://medium.com/@yamare/navigating-the-cloud-resume-challenge-51f4e5442364" target="_blank">How I Made This Website</a>
-
-      <!-- Dark Mode Toggle Switch -->
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="https://medium.com/@yamare/navigating-the-cloud-resume-challenge-51f4e5442364" target="_blank">How I Made This Website</a>
+    </div>
+    <!-- Dark Mode Toggle Switch -->
     <label class="switch" aria-label="Toggle Dark Mode">
       <input type="checkbox" id="dark-mode-toggle">
       <span class="slider">
@@ -454,169 +50,160 @@
     </label>
   </nav>
 
-  <section class="hero">
-    <img src="https://media.licdn.com/dms/image/v2/D5603AQFm4tX-T_PJCg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728319747503?e=1733961600&v=beta&t=Xdg9QkknU14_72aLkvTBubsYsv7qxQSgQL3n0zn8gSY" alt="Yonathan Amare">
-    <h1>Yonathan Amare</h1>
-    <p>Information Systems & Business Analytics Graduate</p>
+  <!-- Hero Section with JavaScript-Based Parallax Background -->
+  <section class="hero" data-aos="fade-down">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQFm4tX-T_PJCg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728319747503?e=1733961600&v=beta&t=Xdg9QkknU14_72aLkvTBubsYsv7qxQSgQL3n0zn8gSY" alt="Yonathan Amare" loading="lazy">
+      <h1>Yonathan Amare</h1>
+      <p>Information Systems & Business Analytics Graduate</p>
+    </div>
   </section>
 
-  <section id="about" class="section">
+  <!-- About Section -->
+  <section id="about" class="section" data-aos="fade-up">
     <h2>About Me</h2>
     <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
       <p>Welcome to my website! I am a recent graduate from Loyola Marymount University with a strong foundation in data analytics, machine learning, and data visualization. I am proficient in Python, SQL, and cloud computing, with experience in transforming complex data into actionable insights. As an NCAA Division I student-athlete, I have developed exceptional time management, discipline, and teamwork skills, which I now apply to my work in data science. I am eager to contribute to meaningful research and further my knowledge in the field through graduate studies.</p>
     </div>
   </section>  
 
-  <section id="experience" class="section experience">
+  <!-- Experience Section -->
+  <section id="experience" class="section experience" data-aos="fade-up">
     <h2>Experience</h2>
     <div class="card-container">
-      <div class="card">
+
+      <!-- Software Engineer Box -->
+      <div class="card" data-aos="zoom-in">
         <h3>Software Engineer</h3>
-        <p>All-Win Rx | Sep 2023 - May 2024</p>
-        <p>Developed a robust Selenium webdriver to automate data extraction for over 1000 missing entries from pharmacy websites,
+        <p><strong>All-Win Rx | Sep 2023 - May 2024</strong></p>
+        <p>Developed a robust Selenium WebDriver to automate data extraction for over 1000 missing entries from pharmacy websites,
           enhancing database accuracy and efficiency. Utilized Python for scripting and integration with MySQL databases.</p>
         <p>Spearheaded the storage and organization of large datasets in a cloud-hosted SQL database, enabling dynamic data analysis and
-          strategic decision-making for pharmacy cost management.</p>
-        <p>Contributed to a cross-functional project that equipped small pharmacies with tools to analyze discounts and profits for the All Win
-          Rx GPO. Delivered a comprehensive solution involving web scraping, data analysis, and database management, significantly
-          enhancing their bargaining power under tight deadlines.</p>
+          strategic decision-making for pharmacy cost management. Managed workflows and project deadlines through Confluence and Jira.</p>
+        <p>Collaborated on a project providing small pharmacies with tools to analyze discounts and profits. Delivered a solution involving web
+          scraping, data analysis, and database management, enhancing their bargaining power under tight deadlines.</p>
       </div>
-      <div class="card">
+
+      <!-- Classroom Support Technician Box -->
+      <div class="card" data-aos="zoom-in">
         <h3>Classroom Support Technician</h3>
-        <p>LMU Information Technology Services | Aug 2022 - May 2024</p>
-        <p>Provided faculty with assistance in use of audio/visual technology in the classroom.</p>
-        <p>Handled incoming calls and provide over-the-phone troubleshooting.</p>
-        <p>Documented and follow up with issues through issue tracking software (ServiceNow).</p>
+        <p><strong>LMU Information Technology Services | Aug 2022 - May 2024</strong></p>
+        <p>Provided faculty with assistance in the use of audio/visual technology in the classroom.</p>
+        <p>Handled incoming calls and provided over-the-phone troubleshooting.</p>
+        <p>Documented and followed up with issues through issue tracking software (ServiceNow).</p>
       </div>
-      <div class="card">
+      
+
+      <!-- Division I Athlete Box -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <h3>Division I Cross Country and Track Athlete</h3>
-        <p>NCAA | Aug 2020 - May 2024</p>
-        <p>Committed to an intensive training plan of 15+ hours a week</p>
-        <p>Developed teamwork, communication, and leadership through collaborative group efforts on and off the course/track with a team of 20+</p>
-        <p>Applied time management skills while balancing practice schedule and schoolwork</p>
+        <p><strong>NCAA | Aug 2020 - May 2024</strong></p>
+        <p>Committed to an intensive training plan of 15+ hours a week.</p>
+        <p>Developed teamwork, communication, and leadership through collaborative group efforts on and off the course/track with a team of 20+.</p>
+        <p>Applied time management skills while balancing practice schedule and schoolwork.</p>
       </div>
     </div>
   </section>
 
-  <section id="certifications" class="section">
+  <!-- Certifications Section -->
+  <section id="certifications" class="section" data-aos="fade-up">
     <h2>Certifications</h2>
     <div class="card-container">
-      <div class="card">
+      <!-- Deep Learning Box -->
+      <div class="card" data-aos="zoom-in">
         <h3>DeepLearning.AI</h3>
         <p>Supervised Machine Learning: Regression and Classification</p>
       </div>
-      <div class="card">
+      
+      <!-- DataCamp Certifications -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
         <h3>DataCamp</h3>
         <p>Joining Data with Pandas, Data Manipulation with Pandas, Introduction to Data Science in Python, Exploratory Data Analysis in Python, Machine Learning with Tree-Based Models in Python, Linear Classifiers in Python, Introduction to Linear Modeling in Python, Cluster Analysis in Python</p>
       </div>
-      <div class="card">
+      
+      <!-- Microsoft Box -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <h3>Microsoft</h3>
         <p>Microsoft Office Specialist: Excel Associate (Office 2019)</p>
       </div>
-      <div class="card">
+      
+      <!-- Bloomberg Box -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
         <h3>Bloomberg</h3>
         <p>Bloomberg Market Concepts</p>
       </div>
     </div>
   </section>  
 
-  <section id="projects" class="section">
+  <!-- Projects Section -->
+  <section id="projects" class="section" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="card-container">
-      <a href="https://github.com/yamare1/veterinary-hospital" target="_blank" class="card" style="text-decoration: none; color: inherit;">
+      <!-- Veterinary Hospital Subqueries -->
+      <a href="https://github.com/yamare1/veterinary-hospital" target="_blank" class="card" data-aos="zoom-in" style="text-decoration: none; color: inherit;">
         <h3>Veterinary Hospital Subqueries</h3>
-        <p>Developed complex SQL queries to analyze a veterinary hospital database, utilizing subqueries, inner/outer joins, and aggregate
-          functions to filter and organize data. Optimized query performance by employing GROUP BY, ORDER BY, and table aliases for
-          clarity and efficiency. Extracted insights that supported operational decision-making for the hospital's services.</p>
+        <p>Developed complex SQL queries to analyze a veterinary hospital database, utilizing subqueries, inner/outer joins, and aggregate functions to filter and organize data. Optimized query performance by employing GROUP BY, ORDER BY, and table aliases for clarity and efficiency. Extracted insights that supported operational decision-making for the hospital's services.</p>
       </a>
-      <a href="https://github.com/yamare1/cloud-resume" target="_blank" class="card" style="text-decoration: none; color: inherit;">
+      
+      <!-- Cloud Resume Challenge -->
+      <a href="https://github.com/yamare1/cloud-resume" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="100" style="text-decoration: none; color: inherit;">
         <h3>Cloud Resume Challenge</h3>
-        <p>Hosted a static resume website on AWS, using S3, CloudFront, DynamoDB, and Lambda for security, optimization, and
-          performance. Implemented a live visitor counter with Python Lambda interacting with a NoSQL database. Developed the frontend
-          with HTML, CSS, and JavaScript, showcasing both backend and frontend integration.</p>
+        <p>Hosted a static resume website on AWS, using S3, CloudFront, DynamoDB, and Lambda for security, optimization, and performance. Implemented a live visitor counter with Python Lambda interacting with a NoSQL database. Developed the frontend with HTML, CSS, and JavaScript, showcasing both backend and frontend integration.</p>
       </a>
-      <a href="https://github.com/yamare1/datathon2024" target="_blank" class="card" style="text-decoration: none; color: inherit;">
+      
+      <!-- LMU Datathon -->
+      <a href="https://github.com/yamare1/datathon2024" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="200" style="text-decoration: none; color: inherit;">
         <h3>LMU Datathon</h3>
-        <p>Utilized Python libraries (NumPy, Pandas, Matplotlib, Scikit-learn) to conduct EDA, create visualizations, and build machine
-          learning models. Analyzed feature importance using Random Forest and Decision Tree algorithms, identifying key variables
-          impacting EPA contract awards, and provided actionable insights to improve access for minority and women-owned businesses.</p>
+        <p>Utilized Python libraries (NumPy, Pandas, Matplotlib, Scikit-learn) to conduct EDA, create visualizations, and build machine learning models. Analyzed feature importance using Random Forest and Decision Tree algorithms, identifying key variables impacting EPA contract awards, and provided actionable insights to improve access for minority and women-owned businesses.</p>
       </a>
     </div>
   </section>
-  
 
-  <section id="skills" class="section">
+  <!-- Skills Section -->
+  <section id="skills" class="section" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="card-container">
-      <div class="card">
+      <!-- Programming Box -->
+      <div class="card" data-aos="zoom-in">
         <h3>Programming</h3>
-        <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, MySQL, </p>
+        <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, MySQL</p>
       </div>
-      <div class="card">
+      
+      <!-- Data Science Box -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
         <h3>Data Science</h3>
         <p>Data Analysis, Machine Learning, Data Visualization, Data Modeling</p>
       </div>
-      <div class="card">
+      
+      <!-- Environments Box -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <h3>Environments</h3>
-        <p>Jupter Notebook, Visual Studio Code, Google Colab, Github, Confluence, Jira, Microsoft Office (Word, Excel, PowerPoint, Access, Outlook)</p>
+        <p>Jupyter Notebook, Visual Studio Code, Google Colab, GitHub, Confluence, Jira, Microsoft Office (Word, Excel, PowerPoint, Access, Outlook)</p>
       </div>
-      <div class="card">
+      
+      <!-- Cloud Services Box -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
         <h3>Cloud Services</h3>
-        <p>AWS (S3, Cloudfront, Lambda, DynamoDB)</p>
+        <p>AWS (S3, CloudFront, Lambda, DynamoDB)</p>
       </div>
-      <div class="card">
+      
+      <!-- Other Skills Box -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="400">
         <h3>Other Skills</h3>
         <p>Version Control, Git, Troubleshooting, Critical Thinking, Teamwork, Communication, Adaptability, Time Management</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer" id="contact">
+  <!-- Footer Section with Parallax Background -->
+  <footer class="footer" id="contact" data-aos="fade-up">
     <p>Contact: <a href="mailto:yonathanamare1@gmail.com">yonathanamare1@gmail.com</a></p>
     <p><a href="https://www.linkedin.com/in/yonathanamare/" target="_blank">LinkedIn</a> | <a href="https://github.com/yamare1" target="_blank">GitHub</a></p>
     <p>Visitor #: <span id="visitor-counter"></span></p>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-  </script>  
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // const menuIcon = document.getElementById('menu-icon');
-     // const sideMenu = document.getElementById('side-menu');
-      const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-      // Toggle side menu visibility and animate hamburger icon
-     // menuIcon.addEventListener('click', () => {
-      //  sideMenu.classList.toggle('open');
-      //  menuIcon.classList.toggle('open');
-     // });
-
-      // Function to apply theme
-      const applyTheme = (theme) => {
-        document.body.dataset.theme = theme;
-        darkModeToggle.checked = theme === 'dark';
-      };
-
-      // Toggle dark mode and save preference
-      darkModeToggle.addEventListener('change', () => {
-        const newTheme = darkModeToggle.checked ? 'dark' : 'light';
-        applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-
-      // Load saved theme on page load
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      applyTheme(savedTheme);
-    });
-  </script>
-
+  <!-- JavaScript Files -->
+  <script src="script.js"></script>
 </body>
 </html>
