@@ -4,13 +4,12 @@ if ('scrollRestoration' in history) {
 }
 window.scrollTo(0, 0);
 
-// Visitor Counter Initialization
+// Dark Mode Toggle, Visitor Counter, and Active Link Handling
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Visitor Counter
   visitorCounter();
-});
 
-// Dark Mode Toggle and Theme Handling
-document.addEventListener('DOMContentLoaded', () => {
+  // Dark Mode Toggle and Theme Handling
   const darkModeToggle = document.getElementById('dark-mode-toggle');
   const navLinks = document.querySelectorAll('nav a');
   const sections = document.querySelectorAll('section');
