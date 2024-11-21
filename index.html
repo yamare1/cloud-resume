@@ -50,9 +50,8 @@
     </label>
   </nav>
 
-  <!-- Hero Section with JavaScript-Based Parallax Background -->
+  <!-- Hero Section with Content Only -->
   <section class="hero" data-aos="fade-down">
-    <div class="hero-background"></div>
     <div class="hero-content">
       <img src="https://media.licdn.com/dms/image/v2/D5603AQFm4tX-T_PJCg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728319747503?e=1733961600&v=beta&t=Xdg9QkknU14_72aLkvTBubsYsv7qxQSgQL3n0zn8gSY" alt="Yonathan Amare" loading="lazy">
       <h1>Yonathan Amare</h1>
@@ -63,45 +62,60 @@
   <!-- About Section -->
   <section id="about" class="section" data-aos="fade-up">
     <h2>About Me</h2>
-    <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <p>Welcome to my website! I am a recent graduate from Loyola Marymount University with a strong foundation in data analytics, machine learning, and data visualization. I am proficient in Python, SQL, and cloud computing, with experience in transforming complex data into actionable insights. As an NCAA Division I student-athlete, I have developed exceptional time management, discipline, and teamwork skills, which I now apply to my work in data science. I am eager to contribute to meaningful research and further my knowledge in the field through graduate studies.</p>
+    <div class="accordion-container">
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="about-content">
+          <h3>Introduction</h3>
+        </button>
+        <div class="accordion-content" id="about-content">
+          <p>Welcome to my website! I am a recent graduate from Loyola Marymount University with a strong foundation in data analytics, machine learning, and data visualization. I am proficient in Python, SQL, and cloud computing, with experience in transforming complex data into actionable insights. As an NCAA Division I student-athlete, I have developed exceptional time management, discipline, and teamwork skills, which I now apply to my work in data science. I am eager to contribute to meaningful research and further my knowledge in the field through graduate studies.</p>
+        </div>
+      </div>
     </div>
   </section>  
 
   <!-- Experience Section -->
-  <section id="experience" class="section experience" data-aos="fade-up">
+  <section id="experience" class="section" data-aos="fade-up">
     <h2>Experience</h2>
-    <div class="card-container">
+    <div class="accordion-container">
 
-      <!-- Software Engineer Box -->
-      <div class="card" data-aos="zoom-in">
-        <h3>Software Engineer</h3>
-        <p><strong>All-Win Rx | Sep 2023 - May 2024</strong></p>
-        <p>Developed a robust Selenium WebDriver to automate data extraction for over 1000 missing entries from pharmacy websites,
-          enhancing database accuracy and efficiency. Utilized Python for scripting and integration with MySQL databases.</p>
-        <p>Spearheaded the storage and organization of large datasets in a cloud-hosted SQL database, enabling dynamic data analysis and
-          strategic decision-making for pharmacy cost management. Managed workflows and project deadlines through Confluence and Jira.</p>
-        <p>Collaborated on a project providing small pharmacies with tools to analyze discounts and profits. Delivered a solution involving web
-          scraping, data analysis, and database management, enhancing their bargaining power under tight deadlines.</p>
+      <!-- Software Engineer Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="software-engineer-content">
+          <h3>Software Engineer</h3>
+          <p><strong>All-Win Rx | Sep 2023 - May 2024</strong></p>
+        </button>
+        <div class="accordion-content" id="software-engineer-content">
+          <p>Developed a robust Selenium WebDriver to automate data extraction for over 1000 missing entries from pharmacy websites, enhancing database accuracy and efficiency. Utilized Python for scripting and integration with MySQL databases.</p>
+          <p>Spearheaded the storage and organization of large datasets in a cloud-hosted SQL database, enabling dynamic data analysis and strategic decision-making for pharmacy cost management. Managed workflows and project deadlines through Confluence and Jira.</p>
+          <p>Collaborated on a project providing small pharmacies with tools to analyze discounts and profits. Delivered a solution involving web scraping, data analysis, and database management, enhancing their bargaining power under tight deadlines.</p>
+        </div>
       </div>
 
-      <!-- Classroom Support Technician Box -->
-      <div class="card" data-aos="zoom-in">
-        <h3>Classroom Support Technician</h3>
-        <p><strong>LMU Information Technology Services | Aug 2022 - May 2024</strong></p>
-        <p>Provided faculty with assistance in the use of audio/visual technology in the classroom.</p>
-        <p>Handled incoming calls and provided over-the-phone troubleshooting.</p>
-        <p>Documented and followed up with issues through issue tracking software (ServiceNow).</p>
+      <!-- Classroom Support Technician Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="classroom-support-content">
+          <h3>Classroom Support Technician</h3>
+          <p><strong>LMU Information Technology Services | Aug 2022 - May 2024</strong></p>
+        </button>
+        <div class="accordion-content" id="classroom-support-content">
+          <p>Provided faculty with assistance in the use of audio/visual technology in the classroom.</p>
+          <p>Handled incoming calls and provided over-the-phone troubleshooting.</p>
+          <p>Documented and followed up with issues through issue tracking software (ServiceNow).</p>
+        </div>
       </div>
-      
 
-      <!-- Division I Athlete Box -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <h3>Division I Cross Country and Track Athlete</h3>
-        <p><strong>NCAA | Aug 2020 - May 2024</strong></p>
-        <p>Committed to an intensive training plan of 15+ hours a week.</p>
-        <p>Developed teamwork, communication, and leadership through collaborative group efforts on and off the course/track with a team of 20+.</p>
-        <p>Applied time management skills while balancing practice schedule and schoolwork.</p>
+      <!-- Division I Athlete Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="athlete-content">
+          <h3>Division I Cross Country and Track Athlete</h3>
+          <p><strong>NCAA | Aug 2020 - May 2024</strong></p>
+        </button>
+        <div class="accordion-content" id="athlete-content">
+          <p>Committed to an intensive training plan of 15+ hours a week.</p>
+          <p>Developed teamwork, communication, and leadership through collaborative group efforts on and off the course/track with a team of 20+.</p>
+          <p>Applied time management skills while balancing practice schedule and schoolwork.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -109,29 +123,45 @@
   <!-- Certifications Section -->
   <section id="certifications" class="section" data-aos="fade-up">
     <h2>Certifications</h2>
-    <div class="card-container">
-      <!-- Deep Learning Box -->
-      <div class="card" data-aos="zoom-in">
-        <h3>DeepLearning.AI</h3>
-        <p>Supervised Machine Learning: Regression and Classification</p>
+    <div class="accordion-container">
+      <!-- Deep Learning Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="deep-learning-content">
+          <h3>DeepLearning.AI</h3>
+        </button>
+        <div class="accordion-content" id="deep-learning-content">
+          <p>Supervised Machine Learning: Regression and Classification</p>
+        </div>
       </div>
       
-      <!-- DataCamp Certifications -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="100">
-        <h3>DataCamp</h3>
-        <p>Joining Data with Pandas, Data Manipulation with Pandas, Introduction to Data Science in Python, Exploratory Data Analysis in Python, Machine Learning with Tree-Based Models in Python, Linear Classifiers in Python, Introduction to Linear Modeling in Python, Cluster Analysis in Python</p>
+      <!-- DataCamp Certifications Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="datacamp-content">
+          <h3>DataCamp</h3>
+        </button>
+        <div class="accordion-content" id="datacamp-content">
+          <p>Joining Data with Pandas, Data Manipulation with Pandas, Introduction to Data Science in Python, Exploratory Data Analysis in Python, Machine Learning with Tree-Based Models in Python, Linear Classifiers in Python, Introduction to Linear Modeling in Python, Cluster Analysis in Python</p>
+        </div>
       </div>
       
-      <!-- Microsoft Box -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <h3>Microsoft</h3>
-        <p>Microsoft Office Specialist: Excel Associate (Office 2019)</p>
+      <!-- Microsoft Certifications Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="microsoft-content">
+          <h3>Microsoft</h3>
+        </button>
+        <div class="accordion-content" id="microsoft-content">
+          <p>Microsoft Office Specialist: Excel Associate (Office 2019)</p>
+        </div>
       </div>
       
-      <!-- Bloomberg Box -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="300">
-        <h3>Bloomberg</h3>
-        <p>Bloomberg Market Concepts</p>
+      <!-- Bloomberg Certifications Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="bloomberg-content">
+          <h3>Bloomberg</h3>
+        </button>
+        <div class="accordion-content" id="bloomberg-content">
+          <p>Bloomberg Market Concepts</p>
+        </div>
       </div>
     </div>
   </section>  
@@ -139,59 +169,94 @@
   <!-- Projects Section -->
   <section id="projects" class="section" data-aos="fade-up">
     <h2>Projects</h2>
-    <div class="card-container">
-      <!-- Veterinary Hospital Subqueries -->
-      <a href="https://github.com/yamare1/veterinary-hospital" target="_blank" class="card" data-aos="zoom-in" style="text-decoration: none; color: inherit;">
-        <h3>Veterinary Hospital Subqueries</h3>
-        <p>Developed complex SQL queries to analyze a veterinary hospital database, utilizing subqueries, inner/outer joins, and aggregate functions to filter and organize data. Optimized query performance by employing GROUP BY, ORDER BY, and table aliases for clarity and efficiency. Extracted insights that supported operational decision-making for the hospital's services.</p>
-      </a>
+    <div class="accordion-container">
+      <!-- Veterinary Hospital Subqueries Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="veterinary-content">
+          <h3>Veterinary Hospital Subqueries</h3>
+        </button>
+        <div class="accordion-content" id="veterinary-content">
+          <p>Developed complex SQL queries to analyze a veterinary hospital database, utilizing subqueries, inner/outer joins, and aggregate functions to filter and organize data. Optimized query performance by employing GROUP BY, ORDER BY, and table aliases for clarity and efficiency. Extracted insights that supported operational decision-making for the hospital's services.</p>
+          <p><a href="https://github.com/yamare1/veterinary-hospital" target="_blank">View GitHub Repository</a></p>
+        </div>
+      </div>
       
-      <!-- Cloud Resume Challenge -->
-      <a href="https://github.com/yamare1/cloud-resume" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="100" style="text-decoration: none; color: inherit;">
-        <h3>Cloud Resume Challenge</h3>
-        <p>Hosted a static resume website on AWS, using S3, CloudFront, DynamoDB, and Lambda for security, optimization, and performance. Implemented a live visitor counter with Python Lambda interacting with a NoSQL database. Developed the frontend with HTML, CSS, and JavaScript, showcasing both backend and frontend integration.</p>
-      </a>
+      <!-- Cloud Resume Challenge Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="cloud-resume-content">
+          <h3>Cloud Resume Challenge</h3>
+        </button>
+        <div class="accordion-content" id="cloud-resume-content">
+          <p>Hosted a static resume website on AWS, using S3, CloudFront, DynamoDB, and Lambda for security, optimization, and performance. Implemented a live visitor counter with Python Lambda interacting with a NoSQL database. Developed the frontend with HTML, CSS, and JavaScript, showcasing both backend and frontend integration.</p>
+          <p><a href="https://github.com/yamare1/cloud-resume" target="_blank">View GitHub Repository</a></p>
+        </div>
+      </div>
       
-      <!-- LMU Datathon -->
-      <a href="https://github.com/yamare1/datathon2024" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="200" style="text-decoration: none; color: inherit;">
-        <h3>LMU Datathon</h3>
-        <p>Utilized Python libraries (NumPy, Pandas, Matplotlib, Scikit-learn) to conduct EDA, create visualizations, and build machine learning models. Analyzed feature importance using Random Forest and Decision Tree algorithms, identifying key variables impacting EPA contract awards, and provided actionable insights to improve access for minority and women-owned businesses.</p>
-      </a>
+      <!-- LMU Datathon Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="datathon-content">
+          <h3>First Place LMU Datathon</h3>
+        </button>
+        <div class="accordion-content" id="datathon-content">
+          <p>Utilized Python libraries (NumPy, Pandas, Matplotlib, Scikit-learn) to conduct EDA, create visualizations, and build machine learning models. Analyzed feature importance using Random Forest and Decision Tree algorithms, identifying key variables impacting EPA contract awards, and provided actionable insights to improve access for minority and women-owned businesses.</p>
+          <p><a href="https://github.com/yamare1/datathon2024" target="_blank">View GitHub Repository</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
   <section id="skills" class="section" data-aos="fade-up">
     <h2>Skills</h2>
-    <div class="card-container">
-      <!-- Programming Box -->
-      <div class="card" data-aos="zoom-in">
-        <h3>Programming</h3>
-        <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, MySQL</p>
+    <div class="accordion-container">
+      <!-- Programming Skills Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="programming-content">
+          <h3>Programming</h3>
+        </button>
+        <div class="accordion-content" id="programming-content">
+          <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, MySQL</p>
+        </div>
       </div>
       
-      <!-- Data Science Box -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="100">
-        <h3>Data Science</h3>
-        <p>Data Analysis, Machine Learning, Data Visualization, Data Modeling</p>
+      <!-- Data Science Skills Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="datascience-content">
+          <h3>Data Science</h3>
+        </button>
+        <div class="accordion-content" id="datascience-content">
+          <p>Data Analysis, Machine Learning, Data Visualization, Data Modeling</p>
+        </div>
       </div>
       
-      <!-- Environments Box -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <h3>Environments</h3>
-        <p>Jupyter Notebook, Visual Studio Code, Google Colab, GitHub, Confluence, Jira, Microsoft Office (Word, Excel, PowerPoint, Access, Outlook)</p>
+      <!-- Environments Skills Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="environments-content">
+          <h3>Environments</h3>
+        </button>
+        <div class="accordion-content" id="environments-content">
+          <p>Jupyter Notebook, Visual Studio Code, Google Colab, GitHub, Confluence, Jira, Microsoft Office (Word, Excel, PowerPoint, Access, Outlook)</p>
+        </div>
       </div>
       
-      <!-- Cloud Services Box -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="300">
-        <h3>Cloud Services</h3>
-        <p>AWS (S3, CloudFront, Lambda, DynamoDB)</p>
+      <!-- Cloud Services Skills Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="cloud-services-content">
+          <h3>Cloud Services</h3>
+        </button>
+        <div class="accordion-content" id="cloud-services-content">
+          <p>AWS (S3, CloudFront, Lambda, DynamoDB)</p>
+        </div>
       </div>
       
-      <!-- Other Skills Box -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="400">
-        <h3>Other Skills</h3>
-        <p>Version Control, Git, Troubleshooting, Critical Thinking, Teamwork, Communication, Adaptability, Time Management</p>
+      <!-- Other Skills Accordion -->
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" aria-controls="other-skills-content">
+          <h3>Other Skills</h3>
+        </button>
+        <div class="accordion-content" id="other-skills-content">
+          <p>Version Control, Git, Troubleshooting, Critical Thinking, Teamwork, Communication, Adaptability, Time Management</p>
+        </div>
       </div>
     </div>
   </section>
@@ -201,14 +266,19 @@
     <p>Contact: <a href="mailto:yonathanamare1@gmail.com">yonathanamare1@gmail.com</a></p>
     <p><a href="https://www.linkedin.com/in/yonathanamare/" target="_blank">LinkedIn</a> | <a href="https://github.com/yamare1" target="_blank">GitHub</a></p>
     <p>Visitor #: <span id="visitor-counter"></span></p>
+    <p>© 2024 Yonathan Amare. All rights reserved.</p>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- External JavaScript Libraries -->
-  <!-- AOS JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   
-  <!-- Your JavaScript Files -->
-  <script src="js/visitor-counter.js"></script>
+  <!-- JavaScript Files -->
+  <script src="js/visitor-counter.js"></script> <!-- Ensure this script is correctly implemented or consider removing if not needed -->
   <script src="js/script.js"></script>
 </body>
 </html>
