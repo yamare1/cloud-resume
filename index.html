@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yonathan Amare - Portfolio</title>
+  <title>Yonathan Amare</title>
 
   <!-- Favicon and Related Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,9 +14,8 @@
   <link rel="preload" as="image" href="https://github.com/yamare1/cloud-resume/blob/main/images/IMG_2685.jpeg?raw=true">
   <link rel="preload" as="image" href="https://github.com/yamare1/cloud-resume/blob/main/images/IMG_4460.jpg?raw=true">
 
-
-
   <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
@@ -28,10 +27,16 @@
   <!-- AOS (Animate On Scroll) CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Global Three.js Container -->
+  <div id="threejs-global-container"></div>
 
   <!-- Navigation Bar -->
   <nav>
@@ -54,25 +59,29 @@
     </label>
   </nav>
 
-  <!-- Hero Section with Content Only -->
+  <!-- Hero Section with Parallax Background -->
   <section class="hero" data-aos="fade-down">
+    <div class="hero-overlay"></div> <!-- Optional Overlay for Better Text Visibility -->
     <div class="hero-content">
-      <img src="https://media.licdn.com/dms/image/v2/D5603AQE3cCbnjR0sIQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732085028940?e=1737590400&v=beta&t=2v1cjz4zT5S54IrjFL5Fsoh9R1vaLx0ndCVe1nvBHao" alt="Yonathan Amare" loading="lazy">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQFpZb818ImCwQ/profile-displayphoto-shrink_800_800/B56ZRTt29jGoAg-/0/1736571318456?e=1742428800&v=beta&t=7C6x2gtr071Bx5sb99_Kh03iQJJClobCGUQUHPqab0I" alt="Yonathan Amare" loading="lazy">
       <h1>Yonathan Amare</h1>
-      <p>Information Systems & Business Analytics Graduate</p>
+      <p>Master's in Statistics Student at Columbia University</p>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About Section with 3D Graphics -->
   <section id="about" class="section" data-aos="fade-up">
     <h2>About Me</h2>
     <div class="accordion-container">
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="about-content">
-          <h3>Introduction</h3>
+          <div class="accordion-header">
+            <h3>Introduction</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="about-content">
-          <p>Welcome to my website! I am a recent graduate from Loyola Marymount University with a strong foundation in data analytics, machine learning, and data visualization. I am proficient in Python, SQL, and cloud computing, with experience in transforming complex data into actionable insights. As an NCAA Division I student-athlete, I have developed exceptional time management, discipline, and teamwork skills, which I now apply to my work in data science. I am eager to contribute to meaningful research and further my knowledge in the field through graduate studies.</p>
+          <p>Welcome to my website! I’m Yonathan Amare, a Master’s student in Statistics at Columbia University with research interests in machine learning, statistical computing, and their applications in personalization and natural language processing. I graduated from Loyola Marymount University, where I was an NCAA Division I cross country and track student-athlete. In my free time, I enjoy reading biographical science books, cooking, and listening to music...while cooking.</p>
         </div>
       </div>
     </div>
@@ -86,8 +95,11 @@
       <!-- Software Engineer Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="software-engineer-content">
-          <h3>Software Engineer</h3>
-          <p><strong>All-Win Rx | Sep 2023 - May 2024</strong></p>
+          <div class="accordion-header">
+            <h3>Software Engineer</h3>
+            <p><strong>All-Win Rx | Sep 2023 - May 2024</strong></p>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="software-engineer-content">
           <p>Developed a robust Selenium WebDriver to automate data extraction for over 1000 missing entries from pharmacy websites, enhancing database accuracy and efficiency. Utilized Python for scripting and integration with MySQL databases.</p>
@@ -99,8 +111,11 @@
       <!-- Classroom Support Technician Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="classroom-support-content">
-          <h3>Classroom Support Technician</h3>
-          <p><strong>LMU Information Technology Services | Aug 2022 - May 2024</strong></p>
+          <div class="accordion-header">
+            <h3>Classroom Support Technician</h3>
+            <p><strong>LMU Information Technology Services | Aug 2022 - May 2024</strong></p>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="classroom-support-content">
           <p>Provided faculty with assistance in the use of audio/visual technology in the classroom.</p>
@@ -112,8 +127,11 @@
       <!-- Division I Athlete Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="athlete-content">
-          <h3>Division I Cross Country and Track Athlete</h3>
-          <p><strong>NCAA | Aug 2020 - May 2024</strong></p>
+          <div class="accordion-header">
+            <h3>Division I Cross Country and Track Athlete</h3>
+            <p><strong>NCAA | Aug 2020 - May 2024</strong></p>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="athlete-content">
           <p>Committed to an intensive training plan of 15+ hours a week.</p>
@@ -131,7 +149,10 @@
       <!-- Deep Learning Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="deep-learning-content">
-          <h3>DeepLearning.AI</h3>
+          <div class="accordion-header">
+            <h3>DeepLearning.AI</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="deep-learning-content">
           <p>Supervised Machine Learning: Regression and Classification</p>
@@ -141,7 +162,10 @@
       <!-- DataCamp Certifications Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="datacamp-content">
-          <h3>DataCamp</h3>
+          <div class="accordion-header">
+            <h3>DataCamp</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="datacamp-content">
           <p>Joining Data with Pandas, Data Manipulation with Pandas, Introduction to Data Science in Python, Exploratory Data Analysis in Python, Machine Learning with Tree-Based Models in Python, Linear Classifiers in Python, Introduction to Linear Modeling in Python, Cluster Analysis in Python</p>
@@ -151,7 +175,10 @@
       <!-- Microsoft Certifications Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="microsoft-content">
-          <h3>Microsoft</h3>
+          <div class="accordion-header">
+            <h3>Microsoft</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="microsoft-content">
           <p>Microsoft Office Specialist: Excel Associate (Office 2019)</p>
@@ -161,7 +188,10 @@
       <!-- Bloomberg Certifications Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="bloomberg-content">
-          <h3>Bloomberg</h3>
+          <div class="accordion-header">
+            <h3>Bloomberg</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="bloomberg-content">
           <p>Bloomberg Market Concepts</p>
@@ -170,7 +200,7 @@
     </div>
   </section>  
 
-  <!-- Projects Section -->
+  <!-- Projects Section with 3D Graphics -->
   <section id="projects" class="section" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="accordion-container">
@@ -178,7 +208,10 @@
       <!-- LMU Datathon Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="datathon-content">
-          <h3>First Place LMU Datathon</h3>
+          <div class="accordion-header">
+            <h3>First Place LMU Datathon</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="datathon-content">
           <p>Utilized Python libraries (NumPy, Pandas, Matplotlib, Scikit-learn) to conduct EDA, create visualizations, and build machine learning models. Analyzed feature importance using Random Forest and Decision Tree algorithms, identifying key variables impacting EPA contract awards, and provided actionable insights to improve access for minority and women-owned businesses.</p>
@@ -189,7 +222,10 @@
       <!-- Machine Learning Assignment Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="veterinary-content">
-          <h3>Machine Learning Cumulative Assignment</h3>
+          <div class="accordion-header">
+            <h3>Machine Learning Cumulative Assignment</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="veterinary-content">
           <p>Worked on data ingestion, cleaning, and preparation, followed by exploration and visualization to identify patterns. Developed machine learning models (decision trees, random forest) and applied regression analysis (ridge, lasso) to predict profitability. Used statistical methods to optimize model performance and draw actionable business insights.</p>
@@ -200,7 +236,10 @@
       <!-- Cloud Resume Challenge Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="cloud-resume-content">
-          <h3>Cloud Resume Challenge</h3>
+          <div class="accordion-header">
+            <h3>Cloud Resume Challenge</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="cloud-resume-content">
           <p>Hosted a static resume website on AWS, using S3, CloudFront, DynamoDB, and Lambda for security, optimization, and performance. Implemented a live visitor counter with Python Lambda interacting with a NoSQL database. Developed the frontend with HTML, CSS, and JavaScript, showcasing both backend and frontend integration.</p>
@@ -218,7 +257,10 @@
       <!-- Programming Skills Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="programming-content">
-          <h3>Programming</h3>
+          <div class="accordion-header">
+            <h3>Programming</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="programming-content">
           <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, MySQL</p>
@@ -228,7 +270,10 @@
       <!-- Data Science Skills Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="datascience-content">
-          <h3>Data Science</h3>
+          <div class="accordion-header">
+            <h3>Data Science</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="datascience-content">
           <p>Data Analysis, Machine Learning, Data Visualization, Data Modeling</p>
@@ -238,7 +283,10 @@
       <!-- Environments Skills Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="environments-content">
-          <h3>Environments</h3>
+          <div class="accordion-header">
+            <h3>Environments</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="environments-content">
           <p>Jupyter Notebook, Visual Studio Code, Google Colab, GitHub, Confluence, Jira, Microsoft Office (Word, Excel, PowerPoint, Access, Outlook)</p>
@@ -248,7 +296,10 @@
       <!-- Cloud Services Skills Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="cloud-services-content">
-          <h3>Cloud Services</h3>
+          <div class="accordion-header">
+            <h3>Cloud Services</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="cloud-services-content">
           <p>AWS (S3, CloudFront, Lambda, DynamoDB)</p>
@@ -258,7 +309,10 @@
       <!-- Other Skills Accordion -->
       <div class="accordion-item">
         <button class="accordion-button" aria-expanded="false" aria-controls="other-skills-content">
-          <h3>Other Skills</h3>
+          <div class="accordion-header">
+            <h3>Other Skills</h3>
+            <i class="fas fa-chevron-down icon"></i>
+          </div>
         </button>
         <div class="accordion-content" id="other-skills-content">
           <p>Version Control, Git, Troubleshooting, Critical Thinking, Teamwork, Communication, Adaptability, Time Management</p>
@@ -267,9 +321,29 @@
     </div>
   </section>
 
-  <!-- Footer Section with Parallax Background -->
-  <footer class="footer" id="contact" data-aos="fade-up">
-    <p>Contact: <a href="mailto:yonathanamare1@gmail.com">yonathanamare1@gmail.com</a></p>
+  <!-- Contact Section (Moved to Bottom) -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Name<span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="from_name" required aria-required="true" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email<span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="from_email" required aria-required="true" placeholder="Your Email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message<span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-status" aria-live="polite"></p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer" data-aos="fade-up">
     <p><a href="https://www.linkedin.com/in/yonathanamare/" target="_blank">LinkedIn</a> | <a href="https://github.com/yamare1" target="_blank">GitHub</a></p>
     <p>Visitor #: <span id="visitor-counter"></span></p>
     <p>© 2024 Yonathan Amare. All rights reserved.</p>
@@ -282,6 +356,8 @@
 
   <!-- External JavaScript Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script> <!-- Updated to the latest version -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   
   <!-- JavaScript Files -->
   <script src="js/visitor-counter.js"></script> <!-- Ensure this script is correctly implemented or consider removing if not needed -->
