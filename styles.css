@@ -11,11 +11,7 @@
      Base Styles
      ========================= */
   body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/IMG_2685.jpeg?raw=true'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Enables parallax effect */
+    font-family: 'Poppins', sans-serif; /* Primary font for body text */
     background-color: #f7f9fc; /* Fallback color */
     color: #000000;
     margin: 0;
@@ -29,7 +25,70 @@
   body.dark {
     background-color: #121212;
     color: #e0e0e0;
-    background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/IMG_4460.jpg?raw=true'); /* Use a darker image for dark mode */
+  }
+  
+  /* =========================
+     Parallax Hero Section
+     ========================= */
+  .hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/IMG_2685.jpeg?raw=true'); /* Light mode background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .hero img:hover {
+    transform: scale(1.1);
+  }
+  
+  .hero h1 {
+    font-family: 'Orbitron', sans-serif; /* Technical font for main heading */
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  /* Dark Mode Hero Background */
+  body.dark .hero {
+    background-image: url('https://github.com/yamare1/cloud-resume/blob/main/images/IMG_4460.jpg?raw=true'); /* Dark mode background */
   }
   
   /* =========================
@@ -55,9 +114,10 @@
   }
   
   nav a {
+    font-family: 'Orbitron', sans-serif; /* Technical font for navigation links */
     color: #333333;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.5s, border-bottom 0.5s;
     position: relative;
   }
@@ -94,21 +154,29 @@
     cursor: pointer;
     outline: none;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transition: background-color 0.3s ease;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   
   .accordion-button:hover,
   .accordion-button[aria-expanded="true"] {
     background-color: rgba(85, 85, 255, 0.1); /* Light primary color background on hover and active */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .accordion-button h3 {
+  .accordion-header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .accordion-header h3 {
+    font-family: 'Orbitron', sans-serif; /* Technical font for accordion titles */
+    font-size: 24px;
     margin-bottom: 5px;
   }
   
-  .accordion-button p {
+  .accordion-header p {
     margin-top: 5px;
     font-size: 14px;
   }
@@ -154,126 +222,26 @@
   }
   
   /* =========================
-     Hero Section
-     ========================= */
-  .hero {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hero img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-  }
-  
-  .hero img:hover {
-    transform: scale(1.1);
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 24px;
-  }
-  
-  /* =========================
-     Responsive Adjustments for Hero Section
-     ========================= */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 36px;
-    }
-  
-    .hero p {
-      font-size: 20px;
-    }
-  
-    .hero img {
-      width: 180px;
-      height: 180px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 28px;
-    }
-  
-    .hero p {
-      font-size: 18px;
-    }
-  
-    .hero img {
-      width: 150px;
-      height: 150px;
-    }
-  }
-  
-  /* =========================
-     Sections
-     ========================= */
-  .section {
-    padding: 100px 20px; /* Increased padding to account for fixed nav */
-    scroll-margin-top: 80px;
-  }
-  
-  .section h2 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  /* =========================
-     Footer Section with Parallax Background
+     Footer Section
      ========================= */
   .footer {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #f7f9fc; /* Fallback color for light mode */
+    background-image: none; /* Remove any background images */
     color: inherit;
     text-align: center;
     padding: 40px 20px;
     transition: background-color 0.5s, color 0.5s;
   }
   
-  .footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 0;
-    transition: background-color 0.5s;
+  body.dark .footer {
+    background-color: #121212;
   }
   
   .footer p {
-    position: relative;
-    z-index: 1;
     margin-bottom: 10px;
     font-size: 18px;
+    font-family: 'Poppins', sans-serif; /* Maintain body font for readability */
   }
   
   .footer a {
@@ -387,13 +355,12 @@
      Responsive Adjustments
      ========================= */
   @media (max-width: 768px) {
-    .hero,
-    .footer {
-      background-attachment: scroll;
+    .hero {
+      background-attachment: scroll; /* Disable parallax on smaller screens for performance */
     }
   
     .hero h1 {
-      font-size: 36px;
+      font-size: 48px;
     }
   
     .hero p {
@@ -403,11 +370,15 @@
     .section h2 {
       font-size: 28px;
     }
+  
+    .accordion-header h3 {
+      font-size: 20px;
+    }
   }
   
   @media (max-width: 480px) {
     .hero h1 {
-      font-size: 28px;
+      font-size: 36px;
     }
   
     .hero p {
@@ -416,6 +387,10 @@
   
     .section h2 {
       font-size: 24px;
+    }
+  
+    .accordion-header h3 {
+      font-size: 18px;
     }
   }
   
@@ -455,3 +430,205 @@
     display: flex;
     opacity: 0.8;
   }  
+  
+  /* =========================
+     Enhanced Accordion Button Styles
+     ========================= */
+  .accordion-button {
+    cursor: pointer; /* Indicates clickable */
+  }
+  
+  .accordion-button .icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion-button[aria-expanded="true"] .icon {
+    transform: rotate(180deg); /* Rotates the chevron when expanded */
+  }
+  
+  /* =========================
+     Additional Enhancements for Interactive Cues
+     ========================= */
+  .accordion-button::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    height: 1px;
+    background-color: #ddd;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .accordion-button:hover::after,
+  .accordion-button[aria-expanded="true"]::after {
+    opacity: 1;
+  }
+  
+  /* =========================
+     Section Titles Alignment
+     ========================= */
+  .section h2 {
+    font-family: 'Orbitron', sans-serif; /* Technical font for section titles */
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #5555ff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  body.dark .section h2::after {
+    background-color: #ff6347;
+  }
+  
+  /* =========================
+     Section Scroll Margin
+     ========================= */
+  .section {
+    scroll-margin-top: 100px; /* Adjust this value based on your navbar's height */
+  }
+  
+  /* =========================
+     Responsive Scroll Margin
+     ========================= */
+  @media (max-width: 768px) {
+    .section {
+      scroll-margin-top: 80px; /* Adjusted for smaller screens if navbar height decreases */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section {
+      scroll-margin-top: 70px; /* Further adjustments for very small screens */
+    }
+  }
+  
+  /* =========================
+     Responsive Navigation Bar
+     ========================= */
+  @media (max-width: 768px) {
+    nav {
+      padding: 10px 15px; /* Reduced padding for smaller screens */
+    }
+  
+    nav .nav-links {
+      gap: 10px; /* Reduced gap between links */
+      flex-wrap: wrap; /* Allows links to wrap to the next line */
+      justify-content: center; /* Centers the links horizontally */
+    }
+  
+    nav a {
+      font-size: 14px; /* Decreased font size for better fit */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav {
+      padding: 8px 10px; /* Further reduced padding for very small screens */
+    }
+  
+    nav .nav-links {
+      gap: 8px; /* Further reduced gap between links */
+    }
+  
+    nav a {
+      font-size: 12px; /* Further decreased font size */
+      padding: 5px; /* Optional: Add some padding for touch targets */
+    }
+  }
+  
+  /* =========================
+     Three.js Global Container Styles
+     ========================= */
+  #threejs-global-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind all other content */
+    overflow: hidden;
+  }
+  
+  /* =========================
+     Hidden Section Styles
+     ========================= */
+  .section.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .section.visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* =========================
+     Contact Form Styles
+     ========================= */
+  #contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #5555ff;
+    outline: none;
+  }
+  
+  #contact-form button {
+    padding: 10px 20px;
+    background-color: #5555ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact-form button:hover {
+    background-color: #ff6347;
+  }
+  
+  #form-status {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+  }    
